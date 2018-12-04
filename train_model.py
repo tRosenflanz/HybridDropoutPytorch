@@ -16,7 +16,7 @@ batch_size_test = 1000
 log_interval = 100
 drop_rate = .5
 random_seed = np.random.randint(low=1,high=1000000000)
-torch.backends.cudnn.enabled = True
+torch.backends.cudnn.enabled = False
 torch.manual_seed(random_seed)
 
 class Flatten(nn.Module):

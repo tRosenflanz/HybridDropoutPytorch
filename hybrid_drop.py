@@ -36,7 +36,7 @@ class HybridDropout_Normal(_HybridDropout_Base):
     
     def logic(self,x):
         #compute e mask
-        mask =torch.rand_like(x).ge(torch.rand(x.size()).cuda()*self.rate).float()
+        mask =torch.rand_like(x).ge(torch.rand(x.size()).type(x.type())*self.rate).float()
         #compute U dot (random sample)
         u_dot=x[torch.randint(x.shape[0],size=(x.shape[0],),dtype=torch.long)]
         return x*mask + u_dot*(1-mask)
