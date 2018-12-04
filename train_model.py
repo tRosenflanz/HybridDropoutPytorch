@@ -10,7 +10,7 @@ import numpy as np
 import pickle 
 import sys
  
-n_epochs = 50
+n_epochs = 100
 batch_size_train = 128
 batch_size_test = 1000
 log_interval = 100
